@@ -31,22 +31,6 @@ It put you directly in the shoes of the person using the code, instead of writin
 
 ---
 
-## Some definitions
-
----
-
-### Unit tests vs Integration tests
-
----
-
-### TDD vs Test First
-
----
-
-### TDD vs BDD
-
----
-
 ## Principle
 
 Use known input and output value to validate that the code is doing what it should.
@@ -87,6 +71,22 @@ No assertions means your test is:
 
 ---
 
+## Some definitions
+
+---
+
+### Unit tests vs Integration tests
+
+---
+
+### TDD vs BDD
+
+---
+
+### TDD vs Test First
+
+---
+
 ## A bigger example
 
 Devise - the kind of software we depend on
@@ -114,12 +114,21 @@ https://pbs.twimg.com/media/CNBxluNU8AAFQJR.png
 * Write the minimal amount of code needed to make the test green
 * Repeat
 
+"Baby steps"
+
 ---
 
 ### Why?
 
 * Force you to think about how to use your code
 * Prevent you to write any code you don't need
+* Small increment make it very easy to spot bugs
+
+---
+### Baby steps
+
+Can you spot the error? (show three lines of code)
+Try again (show 200 lines of code)
 
 ---
 
