@@ -6,18 +6,29 @@
 
 ## Why test?
 
+> "Everyone has a tested environment. Some of us are luck enough to have a separated production environment"
+
+> @stahnma
+
+---
+
+### Why test?
+
+- We make mistakes
+- (a lot of them)
+- Either we found them... or the customer does
+
 ---
 
 ## Manual testing
 
-* good for exploration/UX
-* is totally fine
-* both approach complement each other
-* scripts are powerful tools
+* Good for exploration/UX
+* Totally fine generally
+* Test scripts are powerful tools
 
 ---
 
-## Scripts
+### Scripts
 
 - Go to the main
 - Login with "admin" (should show a list of customer)
@@ -28,14 +39,17 @@ If you start testing regularly, note your testing scheme
 
 ---
 
-## Scripts
+### Scripts - Why?
 
-Why?
 
 - Can delegate
 - Ensure everyone tests the same things
 - Avoid forgetting important parts
 - Speed
+
+---
+
+### Scripts - Personal experience
 
 I used to write down my "sanity test" for a previous company. I could run it in 6-7 minutes. Even once a day, it was not costing me any real time.
 
@@ -137,9 +151,13 @@ Finished in 0.001065s, 938.7247 runs/s, 938.7247 assertions/s.
 ```ruby
 require 'minitest/autorun'
 
-class GameTest < Minitest::Test
-  def test_the_truth
-    assert_equal 4, 2 + 2
+def add(a, b)
+  a + b
+end
+
+class NumberTest < Minitest::Test
+  def test_add_integers
+    assert_equal 4, add(2,2)
   end
 end
 ```
@@ -161,28 +179,6 @@ Error: the code failed
 
 ---
 
-## Some practice
-
-This is Ruby, but applicable to most other languages.
-
----
-
-## Some definitions
-
----
-
-### Unit tests vs Integration tests
-
----
-
-### TDD vs BDD
-
----
-
-### TDD vs Test First
-
----
-
 ## A bigger example
 
 Devise - the kind of software we depend on
@@ -195,6 +191,72 @@ rake
 
 => 17 seconds for 2171 assertions
 ```
+
+---
+
+## Some definitions
+
+---
+
+### Unit tests vs Integration tests
+
+![](images/unit-integration.png)
+
+---
+
+### Unit tests vs Integration tests
+
+Unit Test:
+
+* Small unit of functionality
+* No outside impact
+* Fast
+---
+
+### Unit tests vs Integration tests
+
+Integration Test:
+
+* End to End functionality
+* Slow / Brittle
+
+---
+
+### TDD vs BDD
+
+* Test driven version Behaviour driven
+* About the results vs about the features
+* BDD usually "read like sentences"
+
+---
+
+### TDD vs BDD
+
+```ruby
+# TDD (MiniTest)
+def test_order
+  assert @customer.orders.include? @order
+  assert @customer.ordered_book.include? @book
+end
+
+# BDD (RSpec)
+it "puts the ordered book in customer's order history" do
+  expect(@customer.orders).to include(@order)
+  expect(@customer.ordered_books).to include(@book)
+end
+```
+
+---
+
+### TDD vs BDD
+
+Pick one, you should be fine
+
+---
+
+### TDD vs Test First
+
+
 
 ---
 
