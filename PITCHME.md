@@ -1,10 +1,45 @@
 ## TDD
 
-Image from Meetup
+![](images/tdd-title.jpeg)
 
 ---
 
 ## Why test?
+
+---
+
+## Manual testing
+
+* good for exploration/UX
+* is totally fine
+* both approach complement each other
+* scripts are powerful tools
+
+---
+
+## Scripts
+
+- Go to the main
+- Login with "admin" (should show a list of customer)
+- Click on the first customer (should show detail)
+- Add a note on it (should redirect to the detail, with the node)
+
+If you start testing regularly, note your testing scheme
+
+---
+
+## Scripts
+
+Why?
+
+- Can delegate
+- Ensure everyone tests the same things
+- Avoid forgetting important parts
+- Speed
+
+I used to write down my "sanity test" for a previous company. I could run it in 6-7 minutes. Even once a day, it was not costing me any real time.
+
+Tip: put that in a TEST.md file in your repo, update when updating the code.
 
 ---
 
@@ -28,6 +63,13 @@ Most of the time, the new feature you are working on will work...
 ## Also...
 
 It put you directly in the shoes of the person using the code, instead of writing it.
+
+---
+
+## Automated testing
+
+* Systematic
+* Consistent
 
 ---
 
