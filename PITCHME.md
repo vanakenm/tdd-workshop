@@ -87,6 +87,37 @@ Use known input and output value to validate that the code is doing what it shou
 
 ---
 
+## Simplest example
+
+```ruby
+require 'minitest/autorun'
+
+class GameTest < Minitest::Test
+  def test_the_truth
+    assert true
+  end
+end
+```
+
+---
+
+## Run
+
+```bash
+➜  v1 ruby test/game_test.rb
+Run options: --seed 19942
+
+# Running:
+
+.
+
+Finished in 0.001065s, 938.7247 runs/s, 938.7247 assertions/s.
+
+1 runs, 1 assertions, 0 failures, 0 errors, 0 skips
+```
+
+---
+
 ### Simple start
 
 * Expect (good) results
@@ -101,7 +132,17 @@ Use known input and output value to validate that the code is doing what it shou
 
 ---
 
-### Errors vs Failures
+### Assertions
+
+```ruby
+require 'minitest/autorun'
+
+class GameTest < Minitest::Test
+  def test_the_truth
+    assert_equal 4, 2 + 2
+  end
+end
+```
 
 ---
 
@@ -110,6 +151,19 @@ Use known input and output value to validate that the code is doing what it shou
 No assertions means your test is:
 
 "Does this code fail in a spectacular way" - not a really interesting question
+
+---
+
+### Errors vs Failures
+
+Failure: the code did run, but an assertion did fail
+Error: the code failed
+
+---
+
+## Some practice
+
+This is Ruby, but applicable to most other languages.
 
 ---
 
@@ -133,8 +187,14 @@ No assertions means your test is:
 
 Devise - the kind of software we depend on
 
-git@github.com:plataformatec/devise.git
-17sec for 2171 assertion
+```bash
+git clone git@github.com:plataformatec/devise.git
+cd devise
+bundle install
+rake
+
+=> 17 seconds for 2171 assertions
+```
 
 ---
 
@@ -144,8 +204,9 @@ git@github.com:plataformatec/devise.git
 
 ### A "simple" chart
 
-From https://twitter.com/sarahmei/status/635132440827158528 @sarahmei
-https://pbs.twimg.com/media/CNBxluNU8AAFQJR.png
+From  @sarahmei
+
+![](https://pbs.twimg.com/media/CNBxluNU8AAFQJR.png)
 
 ---
 
@@ -184,9 +245,25 @@ http://imgur.com/acmyARH
 
 ---
 
-## Let's get practical
+## Let's try
 
 LIVE CODE TIME!
+
+---
+
+### A TicTacToe game
+
+- 2 players, 'X' and 'O'
+- 'O' starts
+- Each play in turn
+- 3 x 3 grid
+- First player with three aligned pieces wins
+
+---
+
+### Design
+
+A simple 'Game' class
 
 ---
 
