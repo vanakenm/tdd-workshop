@@ -6,7 +6,7 @@
 
 ## Why test?
 
-> "Everyone has a tested environment. Some of us are luck enough to have a separated production environment"
+> "Everyone has a test environment. Some of us are lucky enough to have a separated production environment"
 
 > @stahnma
 
@@ -31,18 +31,17 @@
 ### Scripts
 
 - Go to the main
-- Login with "admin" (should show a list of customer)
+- Login with "admin" (should show a list of customers)
 - Click on the first customer (should show detail)
-- Add a note on it (should redirect to the detail, with the node)
+- Add a note on it (should redirect to the detail, with the note)
 
-If you start testing regularly, note your testing scheme
+If you start testing regularly, note your testing scheme.
 
 ---
 
 ### Scripts - Why?
 
-
-- Can delegate
+- Can share
 - Ensure everyone tests the same things
 - Avoid forgetting important parts
 - Speed
@@ -59,17 +58,17 @@ Tip: put that in a TEST.md file in your repo, update when updating the code.
 
 ## Why automate tests?
 
-* Laziness
-* Writing tests is funnier than running them
 * Consistency
 * Avoid side effects
 * Productivity
+* Safety net
 
 ---
 
 ## Why automate tests?
 
 Most of the time, the new feature you are working on will work...
+
 ... it will break something else
 
 ---
@@ -256,8 +255,6 @@ Pick one, you should be fine
 
 ### TDD vs Test First
 
-
-
 ---
 
 ## Lifecycle
@@ -299,17 +296,22 @@ Try again (show 200 lines of code)
 
 ### "Red, Green, Refactor"
 
-http://imgur.com/acmyARH
+![](http://i.imgur.com/acmyARH.png)
 
 ---
 
-### Test as bug fixing
+### "Red, Green, Refactor"
+
+Don't clear/refactor non working code - fix it first, refactor after (keeping it working of course)
 
 ---
 
-## Let's try
+### Test as bug fixing technique
 
-LIVE CODE TIME!
+* Reproduce the bug
+* Create a test on it (it fail)
+* Fix the bug
+* Run the test
 
 ---
 
@@ -317,15 +319,22 @@ LIVE CODE TIME!
 
 - 2 players, 'X' and 'O'
 - 'O' starts
-- Each play in turn
-- 3 x 3 grid
+- Players alternate putting a piece
+- 3 x 3 board
 - First player with three aligned pieces wins
 
 ---
 
 ### Design
 
-A simple 'Game' class
+* A simple 'Game' class to get started
+* That's all
+
+---
+
+## Let's try
+
+LIVE CODE TIME!
 
 ---
 
@@ -341,7 +350,15 @@ A simple 'Game' class
 * Manual (scripted!) testing can be very efficient
 * Test costs - creation & maintenance
 * UI are notoriously hard to test (ex: change a button "exit" to a menu - the user is fine, the test is broken)
-  - remember, the user is drunk (well that's UX, but anyway)
+
+---
+
+## From the trenches
+
+> I don't have time to test!
+
+* What feels faster? A skateboard or a 747? What goes faster?
+* You'll use the time - writing tests or debugging it. Pick one.
 
 ---
 
@@ -359,14 +376,14 @@ It's still a team effort & decision - make it part of your "DoD"
 
 ## Final words
 
-As a small story, the last colleague coming in decided to start adding tests - http://www.codingconfessional.com/comments/rmcCFmS7begkRN59Olwn6w
+![](images/confess.png)
 
 ---
 
 ## A first step
 
 * A single test is better than no test
-* Start where it hurts:
+* Start where it hurts
   - code that change a lot
   - code that breaks a lot
   - code easy to test
@@ -376,10 +393,18 @@ As a small story, the last colleague coming in decided to start adding tests - h
 
 ## About me
 
-I'm Martin, I've been creating bugs in HealthCare to Finance & in one person company to multinationals since 15 years
+I'm Martin
+
+I've been creating bugs in Healthcare to Finance & in one person company to multinationals since 15 years
+
 I'm a coach at LeWagon
-I'm currently CTO at BLSQ - BTW we're hiring a product owner right now
+
+I'm currently CTO at BLSQ
+
+You can reach me at martin@joyouscoding.com
 
 ---
 
 # THANKS!
+
+[https://gitpitch.com/vanakenm/tdd-workshop](https://gitpitch.com/vanakenm/tdd-workshop)
