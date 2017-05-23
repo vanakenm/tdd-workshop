@@ -86,6 +86,12 @@ It put you directly in the shoes of the person using the code, instead of writin
 
 ---
 
+> I don't care if it runs on your machine
+
+> We are not shipping your machine!
+
+---
+
 ## Principle
 
 Use known input and output value to validate that the code is doing what it should.
