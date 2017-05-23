@@ -220,6 +220,11 @@ Integration Test:
 * Slow / Brittle
 
 ---
+### Test Pyramid
+
+![](images/test-pyramid.npg)
+
+---
 
 ### TDD vs BDD
 
@@ -287,10 +292,10 @@ From  @sarahmei
 * Small increment make it very easy to spot bugs
 
 ---
+
 ### Baby steps
 
-Can you spot the error? (show three lines of code)
-Try again (show 200 lines of code)
+Spotting errors is easy in 3 lines of code - less so in 2000
 
 ---
 
@@ -359,6 +364,15 @@ LIVE CODE TIME!
 
 * What feels faster? A skateboard or a 747? What goes faster?
 * You'll use the time - writing tests or debugging it. Pick one.
+
+---
+
+### Testing value
+
+* If it’s hard to read… it’s hard to test.
+* If it’s hard to test… it’s hard to use.
+* If it’s hard to test… you’re probably doing it wrong.
+* If it’s hard to test… take a look at the design and test it again !
 
 ---
 
